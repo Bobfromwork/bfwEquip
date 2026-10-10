@@ -527,27 +527,31 @@ RefreshUI = function(preferredSelection)
     for index = 1, visibleRows do
         local row = listRows[index]
         local setName = names[listOffset + index - 1]
-        if setName then
-            row:SetText(setName)
-            row.setName = setName
-            row:Show()
-            if setName == selectedSet then
-                row:SetBackdropColor(0.35, 0.27, 0.08, 0.9)
-                row:SetBackdropBorderColor(1, 0.82, 0, 1)
+        if row then
+            if setName then
+                row:SetText(setName)
+                row.setName = setName
+                row:Show()
+                if setName == selectedSet then
+                    row:SetBackdropColor(0.35, 0.27, 0.08, 0.9)
+                    row:SetBackdropBorderColor(1, 0.82, 0, 1)
+                else
+                    row:SetBackdropColor(0.08, 0.08, 0.08, 0.8)
+                    row:SetBackdropBorderColor(0.35, 0.35, 0.35, 1)
+                end
             else
-                row:SetBackdropColor(0.08, 0.08, 0.08, 0.8)
-                row:SetBackdropBorderColor(0.35, 0.35, 0.35, 1)
+                row.setName = nil
+                row:Hide()
             end
-        else
-            row.setName = nil
-            row:Hide()
         end
     end
 
-    if selectedSet then
-        selectedText:SetText("Selected: " .. selectedSet)
-    else
-        selectedText:SetText("No saved sets yet.")
+    if selectedText then
+        if selectedSet then
+            selectedText:SetText("Selected: " .. selectedSet)
+        else
+            selectedText:SetText("No saved sets yet.")
+        end
     end
 end
 
@@ -628,11 +632,10 @@ local function CreateMainWindow()
 
     local index
     for index = 1, visibleRows do
-        local row = CreateFrame("Button", nil, listContainer)
+        local row = CreateFrame("Button", nil, listContainer, "UIPanelButtonTemplate")
         row:SetWidth(320)
         row:SetHeight(22)
         row:SetPoint("TOPLEFT", listContainer, "TOPLEFT", 2, -((index - 1) * 24))
-        row:SetNormalFontObject(GameFontHighlight)
         row:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight")
         row:EnableMouseWheel(true)
         row:SetScript("OnMouseWheel", function(_, delta)
