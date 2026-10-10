@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: bfwEquip
+## Notes: Save and equip named gear sets.
+## Author: bfwEquip
+## Version: 1.0
+## SavedVariables: bfwEquipDB
+
+bfwEquip.lua
