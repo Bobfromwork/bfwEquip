@@ -12,11 +12,16 @@ list at character selection.
 
 ## Use
 
+- `/bfwequip` or `/bfwequip ui` opens the in-game gear-set window.
 - `/bfwequip save <name>` saves your currently equipped items under a name.
 - `/bfwequip list` lists saved sets.
 - `/bfwequip equip <name>` equips matching items found in your bags.
 - `/bfwequip delete <name>` deletes a saved set.
 - `/bfwequip help` shows the commands.
+
+The window is draggable and lets you select a saved set, save the current gear,
+equip the selected set, or delete it. The set list can be scrolled with the
+mouse wheel.
 
 Set names may contain spaces and are matched without regard to capitalization.
 Saved gear is stored in the `bfwEquipDB` SavedVariables table. Equipping swaps
