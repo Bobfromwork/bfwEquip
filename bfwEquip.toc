@@ -6,3 +6,4 @@
 ## SavedVariables: bfwEquipDB
 
 bfwEquip.lua
+Bindings.xml

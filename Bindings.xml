@@ -1,0 +1,35 @@
+<Bindings>
+    <Binding name="BFWEQUIP_TOGGLE_WINDOW" header="BFWEQUIP">
+        BFWEQUIP_ToggleWindow();
+    </Binding>
+    <Binding name="BFWEQUIP_SET_1" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(1);
+    </Binding>
+    <Binding name="BFWEQUIP_SET_2" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(2);
+    </Binding>
+    <Binding name="BFWEQUIP_SET_3" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(3);
+    </Binding>
+    <Binding name="BFWEQUIP_SET_4" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(4);
+    </Binding>
+    <Binding name="BFWEQUIP_SET_5" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(5);
+    </Binding>
+    <Binding name="BFWEQUIP_SET_6" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(6);
+    </Binding>
+    <Binding name="BFWEQUIP_SET_7" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(7);
+    </Binding>
+    <Binding name="BFWEQUIP_SET_8" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(8);
+    </Binding>
+    <Binding name="BFWEQUIP_SET_9" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(9);
+    </Binding>
+    <Binding name="BFWEQUIP_SET_10" header="BFWEQUIP">
+        BFWEQUIP_EquipHotkey(10);
+    </Binding>
+</Bindings>
